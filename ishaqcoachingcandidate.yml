@@ -22,10 +22,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ishaquecoaching
+  name: ishaquecoachingcandidate
 spec:
   selector:
-    app: ishaquecoaching
+    app: ishaquecoachingcandidate
   ports:
     - port: 80
       targetPort: 8081
