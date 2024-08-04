@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ishaquecoachingcandidate
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ishaquecoachingcandidate
+  template:
+    metadata:
+      labels:
+        app: ishaquecoachingcandidate
+    spec:
+      containers:
+      - name: ishaquecoachingcandidate-container
+        image: ishaqsha/ishaquecoachingcandidate:latest
+        ports:
+          - containerPort: 8081
+---
+#Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: ishaquecoaching
+spec:
+  selector:
+    app: ishaquecoaching
+  ports:
+    - port: 80
+      targetPort: 8081
+  type: LoadBalancer
