@@ -42,7 +42,18 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 	</dependencies>
-
+	<distributionManagement>
+    		<repository>
+        		<id>central</id>
+        		<name>ip-172-31-42-71.ap-south-1.compute.internal-releases</name>
+        		<url>http://3.111.245.70:8081/artifactory/ishaque-coaching-candidate</url>
+    		</repository>
+    		<snapshotRepository>
+        		<id>snapshots</id>
+        		<name>ip-172-31-42-71.ap-south-1.compute.internal-snapshots</name>
+        		<url>http://3.111.245.70:8081/artifactory/ishaque-coaching-candidate</url>
+    		</snapshotRepository>
+	</distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
